@@ -1,0 +1,123 @@
+
+.header{
+    min-height: 840px;
+    background: linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), url(../img/header/Rectangle.jpg), lightgray 50% / cover no-repeat;
+    @include mediaTablet{
+        min-height: unset;
+    }
+}
+
+.header__column{
+    min-height: 840px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 74px 0;
+    @include mediaTablet{
+        min-height: unset;
+        row-gap: 50px;
+        padding: 30px 0 30px 0;
+    }
+}
+
+.header__top-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    @include mediaTablet{
+        display: none;
+    }
+}
+
+.header__list{
+    display: flex;
+    column-gap: 40px;
+    a{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.7px;
+    }
+}
+
+.header__title{
+    text-align: center;
+    font-family: $font-primary;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: normal;
+    color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    @include mediaTablet{
+        font-size: 35px;
+    }
+
+    a{
+        margin-top: 81px;
+        @include mediaTablet{
+            margin-top: 50px;
+        }
+    }
+
+    animation-name: header__title;
+    position: relative;
+    top: -600px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+            @keyframes header__title{
+            0%{
+                top: -600px;
+            }
+            50%{
+                top: 200px;
+            }
+            100%{
+                top: 0;
+            }
+      }
+}
+
+.header__bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    @include mediaTablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.bottom__tel,
+.bottom__address{
+    position: relative;
+    font-size: 18px;
+    padding-left: 35px;
+    cursor: pointer;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 21px;
+        height: 21px;
+    }
+}
+
+.bottom__tel::before{
+    background-image: url('../img/header/phone-call.svg');
+}
+.bottom__address::before{
+    background-image: url('../img/header/placeholder.svg');
+}
+
+.heder__leng{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -1,0 +1,67 @@
+
+.project-info{
+    padding: 180px 0;
+    background: linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0.00) 50.52%, #242B33 90.10%), linear-gradient(0deg, rgba(36, 43, 51, 0.90) 0%, rgba(36, 43, 51, 0.90) 100%), url('../img/project-info/Rectangle.jpg'), lightgray 50% / cover no-repeat;
+    
+    @include mediaTablet{
+        padding: 60px 0;
+    }
+}
+
+.project-info__title{
+    margin-bottom: 17px;
+}
+
+.project-info__subtitle{
+    font-size: 16px;
+    line-height: 24px; 
+}
+.project-info__wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    @include mediaTablet{
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        row-gap: 30px;
+    }
+}
+
+.form__text{
+    color: #E7E7E7;
+    text-align: center;
+    font-size: 13px;
+    line-height: 16px; 
+}
+
+.form__style{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 30px;
+    @include mediaTablet{
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+}
+
+.form-name,
+.form-tel{
+    color: $text-input-color;
+    font-size: 14px;
+    line-height: 27px;
+    font-family: $font-main;
+    height: 50px;
+}
+
+.form__btn{
+    font-family: $font-main;
+    color: $text-color;
+    text-align: center;
+    font-weight: 700;
+    line-height: 27px;
+    background-color: $primary-color;
+    font-size: 16px;
+    height: 50px;
+    &:hover{
+        background-color: rgba(207, 175, 60, 0.9);
+    }
+}
+

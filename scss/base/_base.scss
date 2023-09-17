@@ -1,0 +1,96 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap');
+
+
+body{
+      font-family: $font-main;
+      background-color: $main-color;
+      color: $text-color;
+}
+
+a{
+      color: $text-color;
+      transition: all 0.2s ease-in-out;
+
+      &:hover{
+            color: $primary-color;
+      }
+}
+
+.container{
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 15px;
+}
+
+.container-sm{
+      max-width: 824px;
+      margin: 0 auto;
+      padding: 0 15px;
+}
+
+.text-left{
+      text-align: right;
+      padding-right: 50px;
+      @include mediaTablet{
+            padding: 0;
+            text-align: unset;
+      }
+}
+
+.text-right{
+      padding-left: 50px;
+      @include mediaTablet{
+            padding: 0;
+      }
+}
+
+.mouse-animation{
+      animation-name: mouse-animation;
+      opacity: 0;
+      animation-duration: 2s;
+      animation-delay: 2.5s;
+      animation-fill-mode: forwards;
+
+            @keyframes mouse-animation{
+            0%{
+                  opacity: 0;
+            }
+            100%{
+                  opacity: 1;
+            }
+      }
+}
+
+.title-2{
+      color: $primary-color;
+      font-family: $font-primary;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: normal;
+      @include mediaMobile{
+            font-size: 30px;
+      }
+}
+
+input{
+      background: $input-color;
+      text-align: center;
+      padding: 12px 0;
+      color: $text-color;
+
+      &:focus{
+            background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      &::placeholder{
+            color: $text-input-color;
+            font-family: $font-main;
+            font-size: 14px;
+            line-height: 27px;
+      }
+}
+
+.none{
+      display: none;
+}

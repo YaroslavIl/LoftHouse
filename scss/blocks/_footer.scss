@@ -1,0 +1,39 @@
+
+
+.footer{
+    background-color: $secondary-color;
+    padding: 72px 0 60px 0;
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+
+    @include mediaTablet{
+        padding: 35px 0 30px 0;
+    }
+}
+
+.footer__row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    @include mediaTablet{
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px 30px;
+    }
+}
+
+.footer__logo{
+    margin-top: -12px;
+}
+.footer-nav__list,
+.footer__address-list{
+    display: grid;
+    gap: 15px;
+}
+
+.footer__address-social{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 20px;
+}

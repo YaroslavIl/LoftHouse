@@ -1,0 +1,34 @@
+
+.question{
+    padding-bottom: 180px;
+
+    @include mediaTablet{
+        padding-bottom: 80px;
+    }
+}
+
+.question__title{
+    margin-bottom: 49px;
+}
+
+.form__style-question{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: center;
+
+    @include mediaTablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mediaMobile{
+        grid-template-columns: 1fr;
+    }
+}
+.form__text--bottom{
+    
+    @include mediaMobile{
+        grid-row: 3;
+    }
+}
+

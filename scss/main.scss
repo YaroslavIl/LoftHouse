@@ -1,0 +1,17 @@
+
+// Base
+@import "./base/nulleStyle";
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+
+//Blocks
+@import "./blocks/header";
+@import "./blocks/infrastructure";
+@import "./blocks/apartments";
+@import "./blocks/project-info";
+@import "./blocks/video";
+@import "./blocks/location";
+@import "./blocks/question";
+@import "./blocks/footer";
+@import "./blocks/burger-menu";
