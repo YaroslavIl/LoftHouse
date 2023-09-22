@@ -18,7 +18,7 @@
                     <div class="header-menu">
                         <nav class="burger-menu">
                             <div class="burger-menu__wrap">
-                                <div class="burger-menu__icon burger-menu__icon--active">
+                                <div class="burger-menu__icon ">
                                     <span class="top-line"></span>
                                     <span class="center-line"></span>
                                     <span class="bottom-line"></span>
@@ -29,21 +29,21 @@
                                     <img src="./img/header/logo.svg" alt="logo">
                                 </a>
                                 <ul class="burger-menu__nav-list">
-                                    <li><a href="#">О комплексе</a></li>
-                                    <li><a href="#">Район</a></li>
-                                    <li><a href="#">Каталог квартир</a></li>
-                                    <li><a href="#">Ипотека</a></li>
-                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#project-info">О комплексе</a></li>
+                                    <li><a href="#location">Район</a></li>
+                                    <li><a href="#apartments">Каталог квартир</a></li>
+                                    <li><a href="#question">Ипотека</a></li>
+                                    <li><a href="#footer">Контакты</a></li>
                                 </ul>
                             </div>
                         </nav>
                         <nav class="nav">
                             <ul class="header__list">
-                                <li><a href="">О комплексе</a></li>
-                                <li><a href="">Район</a></li>
-                                <li><a href="">Каталог квартир</a></li>
-                                <li><a href="">Ипотека</a></li>
-                                <li><a href="">Контакты</a></li>
+                                <li><a href="#project-info">О комплексе</a></li>
+                                <li><a href="#location">Район</a></li>
+                                <li><a href="#apartments">Каталог квартир</a></li>
+                                <li><a href="#question">Ипотека</a></li>
+                                <li><a href="#footer">Контакты</a></li>
                                 <li>
                                     <ul class="heder__leng">
                                         <li>UK</li>
@@ -76,7 +76,7 @@
     <main>
         <section id="infrastructure" class="infrastructure none1">
             <div class="container-sm">
-                <div class="infrastructure__row">
+                <div class="infrastructure__row animation animation-card">
                     <div class="row__card">
                         <div><img src="./img/infrastructure/bench.svg" alt="bench"></div>
                         <p class="card__text">Рядом исторические парки и скверы</p>
@@ -96,30 +96,30 @@
                 </div>
             </div>
         </section>
-        <section class="apartments none1">
+        <section id="apartments" class="apartments none1">
             <div class="container">
                 <div class="apartments__title">
                     <h2 class="title-2">Наши квартиры</h2></div>
                 <div class="apartments__cards">
-                    <div class="card__wrap">
+                    <div class="card__wrap anim-card animation">
                         <a class="card" href="#">
                             <img class="card__img" src="./img/apartmens/01.jpg" alt="Loft">
                             <h3 class="card__title">Пентхаус “Loft Олимп”</h3>
                         </a>
                     </div>
-                    <div class="card__wrap">
+                    <div class="card__wrap anim-card animation">
                         <a class="card" href="#">
                             <img class="card__img" src="./img/apartmens/02.jpg" alt="Nice Loft">
                             <h3 class="card__title">Апартаменты “Nice Loft”</h3>
                         </a>
                     </div>
-                    <div class="card__wrap">
+                    <div class="card__wrap anim-card animation">
                         <a class="card" href="#">
                             <img class="card__img" src="./img/apartmens/03.jpg" alt="Loft Studio">
                             <h3 class="card__title">Апартаменты “Loft Studio”</h3>
                         </a>
                     </div>
-                    <div class="card__wrap">
+                    <div class="card__wrap anim-card animation">
                         <a class="card" href="#">
                             <img class="card__img" src="./img/apartmens/04.jpg" alt="Престиж">
                             <h3 class="card__title">Loft квартира “Престиж”</h3>
@@ -128,17 +128,17 @@
                 </div>
             </div>
         </section>
-        <section class="project-info none1">
+        <section id="project-info" class="project-info none1">
             <div class="container">
                 <div class="project-info__title">
                     <h2 class="title-2">Хотите посмотреть?</h2>
                 </div>
                 <div class="project-info__wrap">
-                    <div class="wrap__text-block">
+                    <div class="wrap__text-block animation anim-project-text">
                         <p class="project-info__subtitle">ЖК LoftHouse – это проект бизнес-класса, расположенный в центре города, на Наб. реки Фонтанки 10-15. Комплекс предлагает
                         своим жильцам квартиры площадью от 40 до 170 кв. м. В здании будет три секции, в которых разместится всего 56 квартир.</p>
                     </div>
-                    <div class="wrap__form-block">
+                    <div class="wrap__form-block animation anim-project-form">
                         <form class="form form__style" action="">
                             <input placeholder="Ваше имя" type="text">
                             <input placeholder="Ваш телефон" type="tel">
@@ -151,13 +151,13 @@
         </section>
         <section class="video none1">
             <div class="container">
-                <a href="#" class="video__link">
+                <a href="https://www.youtube.com/watch?v=OOXhs_YnoqE" target="_blank" class="video__link">
                     <img class="video__img" src="./img/video/Rectangle 2.jpg" alt="Rectangle">
                     <img class="video__icon " src="./img/video/play-button.svg" alt="play-button">
                 </a>
             </div>
         </section>
-        <section class="location none1">
+        <section id="location" class="location none1">
             <div class="container">
                 <div class="location__title">
                     <h2 class="title-2">Район на карте</h2>
@@ -167,24 +167,24 @@
                 </div>
             </div>
         </section>
-        <section class="question none1">
+        <section id="question" class="question none1">
             <div class="container">
                 <div class="question__title">
                     <h2 class="title-2">Есть вопросы?</h2>
                 </div>
                 <div class="question-form">
                     <form class="form form__style-question" action="">
-                        <p class="form__text form__text--bottom">*Мы никому не передаем ваши данные.
+                        <p class="form__text form__text--bottom animation form-text-anim">*Мы никому не передаем ваши данные.
                             И не сохраняем ваш номер в базу.</p>
-                        <input class="form-name" placeholder="Ваше имя" type="text">
-                        <input class="form-tel" placeholder="Ваш телефон" type="tel">
-                        <button class="form__btn" type="submit">Посмотреть район</button>
+                        <input class="form-name animation name-anim" placeholder="Ваше имя" type="text">
+                        <input class="form-tel animation mobile-anim" placeholder="Ваш телефон" type="tel">
+                        <button class="form__btn animation btn-anim" type="submit">Посмотреть район</button>
                     </form>
                 </div>
             </div>
         </section>
     </main> 
-    <footer class="footer none1">
+    <footer id="footer" class="footer none1">
         <div class="container">
             <div class="footer__row">
                 <a class="footer__logo" href="">

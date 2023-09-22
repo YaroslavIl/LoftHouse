@@ -1,39 +1,71 @@
 
-
+//burger-menu
 let navIcon = document.querySelector(".burger-menu__icon");
 let navBar = document.querySelector(".burger-menu__nav");
-// console.log(navIcon);
-
-function removingEventListener(event) {
-  console.log(event);
-  if (event.propertyName === "transform") {
-    navIcon.classList.remove("burger-menu__icon--remove");
-    navIcon.removeEventListener("transitionend", removingEventListener);
-  }
-}
 
 function iconActive() {
-    if (
-      navIcon.classList.contains("burger-menu__icon--active") &&
-      navBar.classList.contains("burger-menu__nav--active")
-    ) {
-        navIcon.classList.remove("burger-menu__icon--active");
-        navBar.classList.remove("burger-menu__nav--active");
-        navIcon.classList.add("burger-menu__icon--remove");
-        navIcon.addEventListener("transitionend", removingEventListener);
-        console.log(
-          navIcon.addEventListener("transitionend", removingEventListener)
-        );
-    }
-    else {
-        navIcon.classList.add("burger-menu__icon--active");
-        navBar.classList.add("burger-menu__nav--active");
-    }
+  navIcon.classList.toggle("burger-menu__icon--active");
+  navBar.classList.toggle("burger-menu__nav--active");
 };
 
-
-
 navIcon.addEventListener('click', iconActive);
+
+//scroll
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const blokID = anchor.getAttribute('href')
+    document.querySelector('' + blokID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+}
+
+//animation scrolling
+
+const animItems = document.querySelectorAll(".animation");
+console.log(animItems);
+if (animItems.length > 0) {
+  window.addEventListener('scroll', animOnScroll);
+  function animOnScroll() {
+    for (let index = 0; index < animItems.length; index++){
+      const animItem = animItems[index];
+      // висота блоку
+      const animItemHeight = animItem.offsetHeight;
+      //позиція блоку відносно верху
+      const animItemOffset = offset(animItem).top;
+      //кофіцієнт старту анімації
+      const animStart = 4;
+
+      //розрахунки для старту анімації
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      
+      if (animItemHeight > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
+      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+        animItem.classList.add("anim-active");
+      }
+      else {
+        // no-repeat-anim - клас вимикає повтор анімації
+        if (!animItem.classList.contains("no-repeat-anim")) {
+          animItem.classList.remove("anim-active");
+        }
+      }
+    }
+  }
+
+  //отримання розмірів
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return{ top: rect.top + scrollTop, left: rect.left + scrollLeft }
+  }
+}
 
 
 const languageText = {

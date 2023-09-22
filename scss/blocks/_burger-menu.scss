@@ -153,100 +153,100 @@ display: none;
     align-items: center;
 }
 
-.burger-menu__icon--remove{
-     & span{
-        display: block;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-        position: absolute;
-        // animation-iteration-count: infinite;
+// .burger-menu__icon--remove{
+//      & span{
+//         display: block;
+//         animation-duration: 1s;
+//         animation-timing-function: ease-out;
+//         animation-fill-mode: forwards;
+//         position: absolute;
+//         // animation-iteration-count: infinite;
 
-        &.top-line{
-            top: 0;
-            right: 0;
-            animation-name: top-line;
-        }
+//         &.top-line{
+//             top: 0;
+//             right: 0;
+//             animation-name: top-line;
+//         }
 
-        @keyframes top-line {
-            0%{
+//         @keyframes top-line {
+//             0%{
                 
-                top: 8px;
-                transform: rotate(50deg);
-            }
-            25%{
-                transform: rotate(50deg);
+//                 top: 8px;
+//                 transform: rotate(50deg);
+//             }
+//             25%{
+//                 transform: rotate(50deg);
                 
-            }
-            50%{
-                transform: rotate(25deg);
+//             }
+//             50%{
+//                 transform: rotate(25deg);
                 
-            }
-            75%{
-                top: -18px;
-            }
-            75%{
-                top: -8px;
-            }
-            100%{
-                // top: -8px;
-                position: initial;
-            }
-        }
+//             }
+//             75%{
+//                 top: -18px;
+//             }
+//             75%{
+//                 top: -8px;
+//             }
+//             100%{
+//                 // top: -8px;
+//                 position: initial;
+//             }
+//         }
 
-        &.bottom-line{
-            bottom: 0;
-            right: 0;
-            animation-name: bottom-line;
-        }
-        @keyframes bottom-line {
-            0%{
-                bottom: 8px;
-                transform: rotate(-50deg);
-            }
-            25%{
-                transform: rotate(-25deg);
-            }
-            50%{
-                bottom: -15px;
-            }
-            75%{
-                bottom: -8px;
-            }
-            100%{
-                // bottom: -8px;
-                position: initial;
-            }
+//         &.bottom-line{
+//             bottom: 0;
+//             right: 0;
+//             animation-name: bottom-line;
+//         }
+//         @keyframes bottom-line {
+//             0%{
+//                 bottom: 8px;
+//                 transform: rotate(-50deg);
+//             }
+//             25%{
+//                 transform: rotate(-25deg);
+//             }
+//             50%{
+//                 bottom: -15px;
+//             }
+//             75%{
+//                 bottom: -8px;
+//             }
+//             100%{
+//                 // bottom: -8px;
+//                 position: initial;
+//             }
             
-        }
-        &.center-line{
-            margin: 0;
-            top: 50%;
-            transform: translate(0, -50%);
-            animation-name: center-line;
-        }
-        @keyframes center-line {
-            0%{
+//         }
+//         &.center-line{
+//             margin: 0;
+//             top: 50%;
+//             transform: translate(0, -50%);
+//             animation-name: center-line;
+//         }
+//         @keyframes center-line {
+//             0%{
                 
-                transform: rotate(100deg);
-                right: -20px;
-                opacity: 0;
-            }
-            50%{
-                transform: rotate(100deg);
-                right: -20px;
-            }
-            75%{
-                right: 0;
-            }
-            100%{
-                transform: translate(0, 0);
-                position: initial;
-                margin: 5px 0 5px 0;
-            }
+//                 transform: rotate(100deg);
+//                 right: -20px;
+//                 opacity: 0;
+//             }
+//             50%{
+//                 transform: rotate(100deg);
+//                 right: -20px;
+//             }
+//             75%{
+//                 right: 0;
+//             }
+//             100%{
+//                 transform: translate(0, 0);
+//                 position: initial;
+//                 margin: 5px 0 5px 0;
+//             }
             
-        }
+//         }
         
-    }
-}
+//     }
+// }
 

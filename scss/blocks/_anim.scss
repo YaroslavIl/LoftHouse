@@ -1,0 +1,51 @@
+
+.anim-card{
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.animation-card{
+    transform: translate(-20%, 0);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.anim-project-text{
+    transform: translate(-20%, 0);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.anim-project-form{
+    transform: translate(20%, 0);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.btn-anim,
+.mobile-anim,
+.name-anim,
+.form-text-anim{
+    transform: translate(-20%, 0);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.mobile-anim{
+    transition-delay: 0.3s;
+}
+
+.name-anim{
+    transition-delay: 0.6s;
+}
+
+.form-text-anim{
+    transition-delay: 0.9s;
+}
+
+.anim-active{
+    opacity: 1;
+    transform: scale(1);
+    transform: translate(0, 0);
+}
