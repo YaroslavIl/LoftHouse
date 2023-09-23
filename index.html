@@ -29,11 +29,11 @@
                                     <img src="./img/header/logo.svg" alt="logo">
                                 </a>
                                 <ul class="burger-menu__nav-list">
-                                    <li><a href="#project-info">О комплексе</a></li>
-                                    <li><a href="#location">Район</a></li>
-                                    <li><a href="#apartments">Каталог квартир</a></li>
-                                    <li><a href="#question">Ипотека</a></li>
-                                    <li><a href="#footer">Контакты</a></li>
+                                    <li><a class="nav-link" href="#project-info">О комплексе</a></li>
+                                    <li><a class="nav-link" href="#location">Район</a></li>
+                                    <li><a class="nav-link" href="#apartments">Каталог квартир</a></li>
+                                    <li><a class="nav-link" href="#question">Ипотека</a></li>
+                                    <li><a class="nav-link" href="#footer">Контакты</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -76,20 +76,20 @@
     <main>
         <section id="infrastructure" class="infrastructure none1">
             <div class="container-sm">
-                <div class="infrastructure__row animation animation-card">
-                    <div class="row__card">
+                <div class="infrastructure__row">
+                    <div class="row__card animation animation-card">
                         <div><img src="./img/infrastructure/bench.svg" alt="bench"></div>
                         <p class="card__text">Рядом исторические парки и скверы</p>
                     </div>
-                    <div class="row__card">
+                    <div class="row__card animation animation-card">
                         <div><img src="./img/infrastructure/building.svg" alt="building"></div>
                         <p class="card__text">Полностью обустроенный</p>
                     </div>
-                    <div class="row__card">
+                    <div class="row__card animation animation-card">
                         <div><img src="./img/infrastructure/fountain.svg" alt="fountain"></div>
                         <p class="card__text">10 фонтанов на территории</p>
                     </div>
-                    <div class="row__card">
+                    <div class="row__card animation animation-card">
                         <div><img src="./img/infrastructure/bicycle.svg" alt="bicycle"></div>
                         <p class="card__text">6 км велодорожек</p>
                     </div>
@@ -163,7 +163,10 @@
                     <h2 class="title-2">Район на карте</h2>
                 </div>
                 <div class="location__map">
-                    
+                    <gmp-map center="50.45016098022461,30.523366928100586" zoom="14" map-id="DEMO_MAP_ID">
+                        <gmp-advanced-marker position="50.45016098022461,30.523366928100586" title="My location">
+                        </gmp-advanced-marker>
+                    </gmp-map>
                 </div>
             </div>
         </section>
@@ -245,6 +248,10 @@
             </div>
         </div>
     </footer>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVyVnvId7DTsylXAdtXSwbK2CdsByFe08&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
     <script src="./js/script.js"></script>
 </body>
 </html>

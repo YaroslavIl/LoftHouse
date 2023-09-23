@@ -122,7 +122,7 @@ display: none;
 
 .burger-menu__nav{
     transition: all 0.3s ease-in;
-    transform: translate(0, -100%);
+    transform: translate(0, -200%);
     padding-top: 50px;
     position: fixed;
     z-index: 10;
@@ -135,6 +135,7 @@ display: none;
     flex-direction: column;
     align-items: center;
     row-gap: 70px;
+    overflow: scroll;
     
     & a{
         font-size: 25px;

@@ -2,13 +2,28 @@
 //burger-menu
 let navIcon = document.querySelector(".burger-menu__icon");
 let navBar = document.querySelector(".burger-menu__nav");
+let navLink = document.querySelectorAll('.nav-link');
 
 function iconActive() {
   navIcon.classList.toggle("burger-menu__icon--active");
   navBar.classList.toggle("burger-menu__nav--active");
 };
 
-navIcon.addEventListener('click', iconActive);
+navIcon.addEventListener("click", iconActive);
+
+
+function clickLink() {
+  if (navIcon.classList.contains('burger-menu__icon--active') && navBar.classList.contains('burger-menu__nav--active')) {
+    navIcon.classList.remove("burger-menu__icon--active");
+    navBar.classList.remove("burger-menu__nav--active");
+  }
+}
+
+navLink.forEach(element => {
+  element.addEventListener('click', clickLink)
+});
+
+
 
 //scroll
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -27,7 +42,7 @@ for (let anchor of anchors) {
 //animation scrolling
 
 const animItems = document.querySelectorAll(".animation");
-console.log(animItems);
+
 if (animItems.length > 0) {
   window.addEventListener('scroll', animOnScroll);
   function animOnScroll() {
