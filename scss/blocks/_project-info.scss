@@ -20,6 +20,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
+    overflow: hidden;
     @include mediaTablet{
         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         row-gap: 30px;

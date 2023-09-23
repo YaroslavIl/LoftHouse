@@ -94,6 +94,7 @@ a:hover {
   max-width: 824px;
   margin: 0 auto;
   padding: 0 15px;
+  overflow: hidden;
 }
 
 .text-left {
@@ -392,6 +393,7 @@ input::placeholder {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  overflow: hidden;
 }
 @media (max-width: 670px) {
   .apartments__cards img {
@@ -465,6 +467,7 @@ input::placeholder {
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 30px;
        column-gap: 30px;
+  overflow: hidden;
 }
 @media (max-width: 999px) {
   .project-info__wrap {
@@ -594,6 +597,7 @@ input::placeholder {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   align-items: center;
+  overflow: hidden;
 }
 @media (max-width: 999px) {
   .form__style-question {

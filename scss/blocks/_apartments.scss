@@ -25,6 +25,7 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    overflow: hidden;
     @include mediaMobile{
         & img{
             width: 100%;
