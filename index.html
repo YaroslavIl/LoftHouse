@@ -12,7 +12,7 @@
         <div class="container">
             <div class="header__column">
                 <div class="header__top-row"> 
-                    <a href="">
+                    <a href="#">
                         <img src="./img/header/logo.svg" alt="logo">
                     </a>
                     <div class="header-menu">
@@ -29,26 +29,37 @@
                                     <img src="./img/header/logo.svg" alt="logo">
                                 </a>
                                 <ul class="burger-menu__nav-list">
-                                    <li><a class="nav-link" href="#project-info">О комплексе</a></li>
-                                    <li><a class="nav-link" href="#location">Район</a></li>
-                                    <li><a class="nav-link" href="#apartments">Каталог квартир</a></li>
-                                    <li><a class="nav-link" href="#question">Ипотека</a></li>
-                                    <li><a class="nav-link" href="#footer">Контакты</a></li>
+                                    <li><a class="nav-link about-burger" href="#project-info">О комплексе</a></li>
+                                    <li><a class="nav-link location-burger" href="#location">Район</a></li>
+                                    <li><a class="nav-link apartments-burger" href="#apartments">Каталог квартир</a></li>
+                                    <li><a class="nav-link mortgage-burger" href="#question">Ипотека</a></li>
+                                    <li><a class="nav-link contacts-burger" href="#footer">Контакты</a></li>
+                                    <li>
+                                        <ul>
+                                            <select class="lang-select">
+                                                <option value="Uk">UK</option>
+                                                <option value="En">EN</option>
+                                                <option value="Ru">RU</option>
+                                            </select>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </nav>
                         <nav class="nav">
                             <ul class="header__list">
-                                <li><a href="#project-info">О комплексе</a></li>
-                                <li><a href="#location">Район</a></li>
-                                <li><a href="#apartments">Каталог квартир</a></li>
-                                <li><a href="#question">Ипотека</a></li>
-                                <li><a href="#footer">Контакты</a></li>
+                                <li><a class="about" href="#project-info">О комплексе</a></li>
+                                <li><a class="location" href="#location">Район</a></li>
+                                <li><a class="apartments" href="#apartments">Каталог квартир</a></li>
+                                <li><a class="mortgage" href="#question">Ипотека</a></li>
+                                <li><a class="contacts" href="#footer">Контакты</a></li>
                                 <li>
-                                    <ul class="heder__leng">
-                                        <li>UK</li>
-                                        <li>EN</li>
-                                        <li>RU</li>
+                                    <ul class="heder__lang">
+                                        <select class="lang-select">
+                                            <option value="Uk">UK</option>
+                                            <option value="En">EN</option>
+                                            <option value="Ru">RU</option>
+                                        </select>
                                     </ul>
                                 </li>
                             </ul>
@@ -64,7 +75,7 @@
                     </h1>
                     <div class="header__bottom">
                         <div class="text-left">
-                            <a class="bottom__address">Наб. реки Фонтанки 10-15</a>
+                            <a href="#location" class="bottom__address">Наб. реки Фонтанки 10-15</a>
                         </div>
                         <div class="text-right">
                             <a class="bottom__tel" href="tel:+38121234567">8 (812) 123-45-67</a>
@@ -79,19 +90,19 @@
                 <div class="infrastructure__row">
                     <div class="row__card animation animation-card">
                         <div><img src="./img/infrastructure/bench.svg" alt="bench"></div>
-                        <p class="card__text">Рядом исторические парки и скверы</p>
+                        <p class="card__text parks">Рядом исторические парки и скверы</p>
                     </div>
                     <div class="row__card animation animation-card">
                         <div><img src="./img/infrastructure/building.svg" alt="building"></div>
-                        <p class="card__text">Полностью обустроенный</p>
+                        <p class="card__text full">Полностью обустроенный</p>
                     </div>
                     <div class="row__card animation animation-card">
                         <div><img src="./img/infrastructure/fountain.svg" alt="fountain"></div>
-                        <p class="card__text">10 фонтанов на территории</p>
+                        <p class="card__text fountains">10 фонтанов на территории</p>
                     </div>
                     <div class="row__card animation animation-card">
                         <div><img src="./img/infrastructure/bicycle.svg" alt="bicycle"></div>
-                        <p class="card__text">6 км велодорожек</p>
+                        <p class="card__text bike">6 км велодорожек</p>
                     </div>
                 </div>
             </div>
@@ -99,30 +110,30 @@
         <section id="apartments" class="apartments none1">
             <div class="container">
                 <div class="apartments__title">
-                    <h2 class="title-2">Наши квартиры</h2></div>
+                    <h2 class="title-2 title">Наши квартиры</h2></div>
                 <div class="apartments__cards">
                     <div class="card__wrap anim-card animation">
                         <a class="card" href="#">
                             <img class="card__img" src="./img/apartmens/01.jpg" alt="Loft">
-                            <h3 class="card__title">Пентхаус “Loft Олимп”</h3>
+                            <h3 class="card__title penthouse">Пентхаус “Loft Олимп”</h3>
                         </a>
                     </div>
                     <div class="card__wrap anim-card animation">
                         <a class="card" href="#">
                             <img class="card__img" src="./img/apartmens/02.jpg" alt="Nice Loft">
-                            <h3 class="card__title">Апартаменты “Nice Loft”</h3>
+                            <h3 class="card__title niceloft">Апартаменты “Nice Loft”</h3>
                         </a>
                     </div>
                     <div class="card__wrap anim-card animation">
                         <a class="card" href="#">
                             <img class="card__img" src="./img/apartmens/03.jpg" alt="Loft Studio">
-                            <h3 class="card__title">Апартаменты “Loft Studio”</h3>
+                            <h3 class="card__title loftstudio">Апартаменты “Loft Studio”</h3>
                         </a>
                     </div>
                     <div class="card__wrap anim-card animation">
                         <a class="card" href="#">
                             <img class="card__img" src="./img/apartmens/04.jpg" alt="Престиж">
-                            <h3 class="card__title">Loft квартира “Престиж”</h3>
+                            <h3 class="card__title prestigeloft">Loft квартира “Престиж”</h3>
                         </a>
                     </div>
                 </div>
@@ -131,19 +142,19 @@
         <section id="project-info" class="project-info none1">
             <div class="container">
                 <div class="project-info__title">
-                    <h2 class="title-2">Хотите посмотреть?</h2>
+                    <h2 class="title-2 title-info">Хотите посмотреть?</h2>
                 </div>
                 <div class="project-info__wrap">
                     <div class="wrap__text-block animation anim-project-text">
-                        <p class="project-info__subtitle">ЖК LoftHouse – это проект бизнес-класса, расположенный в центре города, на Наб. реки Фонтанки 10-15. Комплекс предлагает
+                        <p class="project-info__subtitle description">ЖК LoftHouse – это проект бизнес-класса, расположенный в центре города, на Наб. реки Фонтанки 10-15. Комплекс предлагает
                         своим жильцам квартиры площадью от 40 до 170 кв. м. В здании будет три секции, в которых разместится всего 56 квартир.</p>
                     </div>
                     <div class="wrap__form-block animation anim-project-form">
-                        <form class="form form__style" action="">
-                            <input placeholder="Ваше имя" type="text">
-                            <input placeholder="Ваш телефон" type="tel">
-                            <p class="form__text">*Мы никому не передаем ваши данные.<br> И не сохраняем ваш номер в базу.</p>
-                            <button class="form__btn" type="submit">Посмотреть район</button>
+                        <form class="form form__style" action="dummy.php">
+                            <input class="name" placeholder="Ваше имя" type="text">
+                            <input class="telephone" placeholder="Ваш телефон" type="tel">
+                            <p class="form__text form-text">*Мы никому не передаем ваши данные.<br> И не сохраняем ваш номер в базу.</p>
+                            <button class="form__btn btn" type="submit">Посмотреть район</button>
                         </form>
                     </div>
                 </div>
@@ -152,7 +163,7 @@
         <section class="video none1">
             <div class="container">
                 <a href="https://www.youtube.com/watch?v=OOXhs_YnoqE" target="_blank" class="video__link">
-                    <img class="video__img" src="./img/video/Rectangle 2.jpg" alt="Rectangle">
+                    <img class="video__img" src="./img/video/Rectangle2.jpg" alt="Rectangle">
                     <img class="video__icon " src="./img/video/play-button.svg" alt="play-button">
                 </a>
             </div>
@@ -160,7 +171,7 @@
         <section id="location" class="location none1">
             <div class="container">
                 <div class="location__title">
-                    <h2 class="title-2">Район на карте</h2>
+                    <h2 class="title-2 location-title">Район на карте</h2>
                 </div>
                 <div class="location__map">
                     <gmp-map center="50.45016098022461,30.523366928100586" zoom="14" map-id="DEMO_MAP_ID">
@@ -173,15 +184,15 @@
         <section id="question" class="question none1">
             <div class="container">
                 <div class="question__title">
-                    <h2 class="title-2">Есть вопросы?</h2>
+                    <h2 class="title-2 question-title">Есть вопросы?</h2>
                 </div>
                 <div class="question-form">
-                    <form class="form form__style-question" action="">
-                        <p class="form__text form__text--bottom animation form-text-anim">*Мы никому не передаем ваши данные.
+                    <form class="form form__style-question" action="dummy.php">
+                        <p class="form__text form__text--bottom animation form-text-anim form-text-leng">*Мы никому не передаем ваши данные.
                             И не сохраняем ваш номер в базу.</p>
-                        <input class="form-name animation name-anim" placeholder="Ваше имя" type="text">
-                        <input class="form-tel animation mobile-anim" placeholder="Ваш телефон" type="tel">
-                        <button class="form__btn animation btn-anim" type="submit">Посмотреть район</button>
+                        <input class="form-name animation name-anim you-name" placeholder="Ваше имя" type="text">
+                        <input class="form-tel animation mobile-anim phone" placeholder="Ваш телефон" type="tel">
+                        <button class="form__btn animation btn-anim button" type="submit">Посмотреть район</button>
                     </form>
                 </div>
             </div>
@@ -196,30 +207,30 @@
                 <div class="footer__nav">
                     <nav class="footer-nav">
                         <ul class="footer-nav__list">
-                            <li><a href="#">О комплексе</a></li>
-                            <li><a href="#">Район</a></li>
-                            <li><a href="#">Каталог квартир</a></li>
-                            <li><a href="#">Ипотека</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a class="about-footer" href="#">О комплексе</a></li>
+                            <li><a class="location-footer" href="#">Район</a></li>
+                            <li><a class="apartments-footer" href="#">Каталог квартир</a></li>
+                            <li><a class="mortgage-footer" href="#">Ипотека</a></li>
+                            <li><a class="contacts-footer" href="#">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="footer__nav">
                     <nav class="footer-nav">
                         <ul class="footer-nav__list">
-                            <li><a href="#">Поселение и переезд</a></li>
-                            <li><a href="#">Сервисные услуги</a></li>
-                            <li><a href="#">Экологическая устойчивость</a></li>
-                            <li><a href="#">Инвестиционные возможности</a></li>
-                            <li><a href="#">Программа лояльности</a></li>
+                            <li><a class="settlement" href="#">Поселение и переезд</a></li>
+                            <li><a class="services" href="#">Сервисные услуги</a></li>
+                            <li><a class="sustainability" href="#">Экологическая устойчивость</a></li>
+                            <li><a class="investments" href="#">Инвестиционные возможности</a></li>
+                            <li><a class="loyalty-program" href="#">Программа лояльности</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="footer__address">
                         <ul class="footer__address-list">
-                            <li>Адрес: Наб. реки Фонтанки 10-15</li>
-                            <li>Телефон: <a href="tel:+38121234567">8 (812) 123-45-67</a></li>
-                            <li>Отдел продаж: 10:00 - 20:00</li>
+                            <li class="address">Адрес: Наб. реки Фонтанки 10-15</li>
+                            <li class="phone-footer">Телефон: <a href="tel:+38121234567">8 (812) 123-45-67</a></li>
+                            <li class="sales-department-footer">Отдел продаж: 10:00 - 20:00</li>
                             <li>E-mail: <a href="mailto:vip@lofthouse.ru">vip@lofthouse.ru</a></li>
                         </ul>
                         <ul class="footer__address-social">
@@ -238,7 +249,7 @@
                                     <img src="./img/footer/facebook.svg" alt="facebook">
                                 </a>
                             </li>
-                            <li#>
+                            <li>
                                 <a href="https://www.youtube.com/">
                                     <img src="./img/footer/instagram.svg" alt="instagram">
                                 </a>

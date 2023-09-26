@@ -230,6 +230,8 @@ input::placeholder {
   color: #D4C17F;
   display: flex;
   flex-direction: column;
+  max-width: 550px;
+  align-self: center;
   animation-name: header__title;
   position: relative;
   top: -600px;
@@ -299,10 +301,17 @@ input::placeholder {
   background-image: url("../img/header/placeholder.svg");
 }
 
-.heder__leng {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.lang-select {
+  background-color: #242B33;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+}
+.lang-select option {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
 }
 
 .infrastructure {

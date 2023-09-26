@@ -52,6 +52,8 @@
     color: $primary-color;
     display: flex;
     flex-direction: column;
+    max-width: 550px;
+    align-self: center;
     @include mediaTablet{
         font-size: 35px;
     }
@@ -116,8 +118,18 @@
     background-image: url('../img/header/placeholder.svg');
 }
 
-.heder__leng{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.lang-select{
+    // appearance: none; 
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    background-color: $main-color;
+    color: $text-color;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: $font-main;
+    & option{
+        font-size: 15px;
+        font-family: $font-main;
+    }
 }

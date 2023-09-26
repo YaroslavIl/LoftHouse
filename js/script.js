@@ -11,7 +11,6 @@ function iconActive() {
 
 navIcon.addEventListener("click", iconActive);
 
-
 function clickLink() {
   if (navIcon.classList.contains('burger-menu__icon--active') && navBar.classList.contains('burger-menu__nav--active')) {
     navIcon.classList.remove("burger-menu__icon--active");
@@ -40,7 +39,6 @@ for (let anchor of anchors) {
 }
 
 //animation scrolling
-
 const animItems = document.querySelectorAll(".animation");
 
 if (animItems.length > 0) {
@@ -83,103 +81,139 @@ if (animItems.length > 0) {
 }
 
 
-const languageText = {
-  "langText-menu": {
-    uk: "Про комплекс Район Каталог квартир Іпотека Контакти",
-    en: "About the complex District Catalog of apartments Mortgage Contacts",
-    ru: "О комплексе Район Каталог квартир Ипотека Контакты",
-  },
-  "langText-title": {
-    uk: "Житловий комплекс в історичному центрі",
-    en: "Residential complex in the historical center",
-    ru: "Жилой комплекс  в историческом центре",
-  },
-}; 
+// languages
 
-const sections = {
-  about: {
-    uk: "Про комплекс",
-    en: "About the complex",
-    ru: "О комплексе",
-  },
-  district: {
-    uk: "Район",
-    en: "District",
-    ru: "Район",
-  },
-  catalog: {
-    uk: "Каталог квартир",
-    en: "Catalog of apartments",
-    ru: "Каталог квартир",
-  },
-  mortgage: {
-    uk: "Іпотека",
-    en: "Mortgage",
-    ru: "Ипотека",
-  },
-  contacts: {
-    uk: "Контакти",
-    en: "Contacts",
-    ru: "Контакты",
-  },
-  location: {
-    uk: "Адрес",
-    en: "Address",
-    ru: "Адрес",
-  },
-  phone: {
-    uk: "Телефон",
-    en: "Phone",
-    ru: "Телефон",
-  },
-  sales: {
-    uk: "Отдел продаж",
-    en: "Sales department",
-    ru: "Отдел продаж",
-  },
-};
+let select = document.querySelector(".lang-select");
 
-const content = {
-  about: {
-    uk: "Житловий комплекс в історичному центрі",
-    en: "Residential complex in the historical center",
-    ru: "Жилой комплекс в историческом центре",
-  },
-  district: {
-    uk: "Район на карті",
-    en: "District on the map",
-    ru: "Район на карте",
-  },
-  catalog: {
-    uk: "Наші квартири",
-    en: "Our apartments",
-    ru: "Наши квартиры",
-  },
-  mortgage: {
-    uk: "Поселення і переїзд",
-    en: "Settlement and moving",
-    ru: "Поселение и переезд",
-  },
-  contacts: {
-    uk: "Адрес: Наб. реки Фонтанки 10-15\nТелефон: 8 (812) 123-45-67\nОтдел продаж: 10:00 - 20:00",
-    en: "Address: Fontanka River Embankment 10-15\nPhone: 8 (812) 123-45-67\nSales department: 10:00 - 20:00",
-    ru: "Адрес: Наб. реки Фонтанки 10-15\nТелефон: 8 (812) 123-45-67\nОтдел продаж: 10:00 - 20:00",
-  },
-  location: {
-    uk: "Адрес: ",
-    en: "Address: ",
-    ru: "Адрес: ",
-  },
-  phone: {
-    uk: "Телефон: ",
-    en: "Phone: ",
-    ru: "Телефон: ",
-  },
-  sales: {
-    uk: "Отдел продаж: ",
-    en: "Sales department: ",
-    ru: "Отдел продаж: ",
-  },
-};
+//Language selection during download
+document.addEventListener("DOMContentLoaded", setDefaultLanguage);
+
+function setDefaultLanguage() {
+  let savedLanguage = localStorage.getItem("language");
+  if (savedLanguage !== null && savedLanguage !== undefined) {
+    select.value = savedLanguage;
+    changeLanguage(savedLanguage);
+  }
+  else {
+    changeLanguage('Uk');
+  }
+}
+
+// language selection on click
+select.addEventListener("change", changeSelectValue);
+
+function changeSelectValue() {
+  let lang = select.value;
+  console.log(lang);
+  if (lang == 'En') {
+    localStorage.setItem('language', 'En')
+    changeLanguage("En");
+  }
+  else if (lang == 'Ru') {
+    localStorage.setItem("language", "Ru");
+    changeLanguage("Ru");
+  }
+  else if (lang == 'Uk') {
+    localStorage.setItem("language", "Uk");
+    changeLanguage("Uk");
+  }
+  else {
+    localStorage.setItem("language", "Uk");
+    changeLanguage("Uk");
+  }
+}
+
+//доступ до json файлів
+function loadJsone(file) {
+  return fetch(file)
+    .then((response) => {
+      if (!response.ok) {
+      throw new Error(`Network not ok: ${response.status}`)
+      }
+      return response.json()
+    })
+    .catch((error) => {
+    console.error('Помилка ззчитування:', error);
+  })
+}
+
+function changeLanguage(lang) {
+  // завантаження JSON-файлу для вибраної мови
+  loadJsone(`json/${lang}.json`)
+    .then((data) => {
+      // Оновлення сторінки з новою мовою
+      updatePageContent(data);
+    })
+    .catch((error) => {
+      console.error("Помилка завантаження JSON:", error);
+    });
+}
+
+function updatePageContent(data) {
+  // Оновлення тексту на сторінці, використовуючи дані з JSON
+  document.querySelector(".header__title").textContent = data.header.title;
+  document.querySelector(".bottom__address").textContent = data.header.address;
+  document.querySelector(".about").textContent = data.menu.about;
+  document.querySelector(".about-burger").textContent = data.menu.about;
+  document.querySelector(".location").textContent = data.menu.location;
+  document.querySelector(".location-burger").textContent = data.menu.location;
+  document.querySelector(".apartments").textContent = data.menu.apartments;
+  document.querySelector(".apartments-burger").textContent =
+    data.menu.apartments;
+  document.querySelector(".mortgage").textContent = data.menu.mortgage;
+  document.querySelector(".mortgage-burger").textContent = data.menu.mortgage;
+  document.querySelector(".contacts").textContent = data.menu.contacts;
+  document.querySelector(".contacts-burger").textContent = data.menu.contacts;
+  document.querySelector(".parks").textContent = data.infrastructure.parks;
+  document.querySelector(".full").textContent =
+    data.infrastructure.fullyEquipped;
+  document.querySelector(".fountains").textContent =
+    data.infrastructure.fountains;
+  document.querySelector(".bike").textContent =
+    data.infrastructure.bikePaths;
+  document.querySelector(".title").textContent = data.apartmentsSection.title;
+  document.querySelector(".penthouse").textContent =
+    data.apartmentsSection.penthouse;
+  document.querySelector(".niceloft").textContent =
+    data.apartmentsSection.niceLoft;
+  document.querySelector(".loftstudio").textContent =
+    data.apartmentsSection.loftStudio;
+  document.querySelector(".prestigeloft").textContent =
+    data.apartmentsSection.prestigeLoft;
+  document.querySelector(".title-info").textContent = data.projectInfo.title;
+  document.querySelector(".description").textContent =
+    data.projectInfo.description;
+  document.querySelector(".you-name").placeholder = data.projectInfo.name;
+  document.querySelector(".phone").placeholder = data.projectInfo.telephone;
+  document.querySelector(".button").textContent = data.projectInfo.btn;
+  document.querySelector(".form-text-leng").textContent = data.projectInfo.formText;
+  document.querySelector(".location-title").textContent = data.location.title;
+  document.querySelector(".question-title").textContent = data.question.title;
+  document.querySelector(".name").placeholder = data.projectInfo.name;
+  document.querySelector(".telephone").placeholder = data.projectInfo.telephone;
+  document.querySelector(".btn").textContent = data.projectInfo.btn;
+  document.querySelector(".about-footer").textContent = data.footer.links.about;
+  document.querySelector(".location-footer").textContent = data.footer.links.location;
+  document.querySelector(".apartments-footer").textContent = data.footer.links.apartments;
+  document.querySelector(".mortgage-footer").textContent =
+    data.footer.links.mortgage;
+  document.querySelector(".contacts-footer").textContent =
+    data.footer.links.contacts;
+  document.querySelector(".settlement").textContent =
+    data.footer.sections.settlement;
+  document.querySelector(".services").textContent =
+    data.footer.sections.services;
+  document.querySelector(".sustainability").textContent =
+    data.footer.sections.sustainability;
+  document.querySelector(".investments").textContent =
+    data.footer.sections.investments;
+  document.querySelector(".loyalty-program").textContent =
+    data.footer.sections.loyaltyProgram;
+  document.querySelector(".address").textContent = data.footer.address;
+  document.querySelector(".phone-footer").textContent = data.footer.phone;
+  document.querySelector(".sales-department-footer").textContent =
+    data.footer.salesDepartment;
+}
+
 
 

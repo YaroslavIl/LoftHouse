@@ -1,0 +1,64 @@
+{
+    "header": {
+        "title": "Residential complex in the historical center",
+        "address": "Fontanka River Embankment 10-15"
+    },
+    "menu": {
+        "about": "About the Complex",
+        "location": "Location",
+        "apartments": "Apartment Catalog",
+        "mortgage": "Mortgage",
+        "contacts": "Contacts"
+    },
+    "infrastructure": {
+        "parks": "Historical parks and squares nearby",
+        "fullyEquipped": "Fully equipped",
+        "fountains": "10 fountains on the territory",
+        "bikePaths": "6 km of bike paths"
+    },
+    "apartmentsSection": {
+        "title": "Our Apartments",
+        "penthouse": "Penthouse “Loft Olympus”",
+        "niceLoft": "Apartments “Nice Loft”",
+        "loftStudio": "Apartments “Loft Studio”",
+        "prestigeLoft": "Loft apartment “Prestige”"
+    },
+    "projectInfo": {
+        "title": "Want to see?",
+        "description": "LoftHouse RC is a premium-class project located in the city center, on Fontanka River Embankment 10-15. The complex offers apartments ranging from 40 to 170 sq. m. There will be three sections in the building, accommodating a total of 56 apartments.",
+        "name": "Your name",
+        "telephone": "Your phone",
+        "btn": "See the area",
+        "formText": "*We do not share your data with anyone. And we do not save your number in the database."
+    },
+    "video": {
+        "imageAlt": "Video",
+        "playButtonAlt": "Play"
+    },
+    "location": {
+        "title": "Area on the Map"
+    },
+    "question": {
+        "title": "Have Questions?"
+    },
+    "footer": {
+        "links": {
+            "about": "About the Complex",
+            "location": "Location",
+            "apartments": "Apartment Catalog",
+            "mortgage": "Mortgage",
+            "contacts": "Contacts"
+        },
+        "sections": {
+            "settlement": "Settlement and Relocation",
+            "services": "Service Services",
+            "sustainability": "Environmental Sustainability",
+            "investments": "Investment Opportunities",
+            "loyaltyProgram": "Loyalty Program"
+        },
+        "address": "Address: Fontanka River Embankment 10-15",
+        "phone": "Phone: 8 (812) 123-45-67",
+        "salesDepartment": "Sales Department: 10:00 - 20:00",
+        "email": "E-mail: vip@lofthouse.ru"
+    }
+}
