@@ -83,7 +83,9 @@ if (animItems.length > 0) {
 
 // languages
 
-let select = document.querySelector(".lang-select");
+let select = document.querySelectorAll(".lang-select");
+let test = Array.from(select);
+
 
 //Language selection during download
 document.addEventListener("DOMContentLoaded", setDefaultLanguage);
@@ -91,7 +93,9 @@ document.addEventListener("DOMContentLoaded", setDefaultLanguage);
 function setDefaultLanguage() {
   let savedLanguage = localStorage.getItem("language");
   if (savedLanguage !== null && savedLanguage !== undefined) {
-    select.value = savedLanguage;
+    test.forEach((element) => {
+      element.value = savedLanguage;
+    });
     changeLanguage(savedLanguage);
   }
   else {
@@ -99,29 +103,19 @@ function setDefaultLanguage() {
   }
 }
 
-// language selection on click
-select.addEventListener("change", changeSelectValue);
 
-function changeSelectValue() {
-  let lang = select.value;
-  console.log(lang);
-  if (lang == 'En') {
-    localStorage.setItem('language', 'En')
-    changeLanguage("En");
-  }
-  else if (lang == 'Ru') {
-    localStorage.setItem("language", "Ru");
-    changeLanguage("Ru");
-  }
-  else if (lang == 'Uk') {
-    localStorage.setItem("language", "Uk");
-    changeLanguage("Uk");
-  }
-  else {
-    localStorage.setItem("language", "Uk");
-    changeLanguage("Uk");
-  }
-}
+test.forEach((element) => {
+  element.addEventListener("change", function () {
+    const selectedLanguage = this.value;
+    localStorage.setItem("language", selectedLanguage);
+
+    test.forEach(element => { //синхронізація значень всіх елемеенів масиву
+      element.value = selectedLanguage;
+    });
+
+    changeLanguage(selectedLanguage);
+  });
+});
 
 //доступ до json файлів
 function loadJsone(file) {
