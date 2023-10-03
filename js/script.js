@@ -43,6 +43,7 @@ const animItems = document.querySelectorAll(".animation");
 
 if (animItems.length > 0) {
   window.addEventListener('scroll', animOnScroll);
+  animOnScroll()
   function animOnScroll() {
     for (let index = 0; index < animItems.length; index++){
       const animItem = animItems[index];
